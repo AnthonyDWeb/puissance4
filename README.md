@@ -8,7 +8,7 @@
 - Reproduction du jeu Puissance 4
 - Possibilité de mettre une musique (prédéfit) pendant le jeu (situé en dessous du jeu)
 
-## Technoligies utilisées: 
+## Technologies utilisées: 
 - React
 - react-h5-audio-player
 - CSS3
