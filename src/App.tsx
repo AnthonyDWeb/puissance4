@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./App.css";
 
 type Piece = string | number;
@@ -11,7 +11,6 @@ function App() {
 	const [victory, setVictory] = useState<undefined | string>();
 
 	useEffect(() => initGame(), []);
-	useEffect(() => checkVictoryCondition(), [gameboard]);
 	useEffect(() => {
 		if (victory) {
 			alert(victory);
@@ -49,7 +48,7 @@ function App() {
 		setPlayer(!player);
 	};
 
-	const checkVictoryCondition = () => {
+	const checkVictoryCondition = useCallback(() => {
 		for (let i = 0; i < gameboard.length; i++) {
 			const row = gameboard[i];
 			row.forEach((p: Piece, num: number) => {
@@ -82,7 +81,8 @@ function App() {
 				}
 			});
 		}
-	};
+	}, [gameboard]);
+	useEffect(() => checkVictoryCondition(), [checkVictoryCondition]);
 
 	// RENDER ---------------------------------------
 
