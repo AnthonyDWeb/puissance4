@@ -1,0 +1,4 @@
+Contact: mailto:contact@arkanya.fr
+Expires: 2027-10-10T15:51:33.058Z
+Preferred-Languages: fr, en
+Canonical: https://www.puissance4.anthony-delforge.fr/.well-known/security.txt
